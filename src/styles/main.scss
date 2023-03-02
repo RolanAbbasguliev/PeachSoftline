@@ -1,0 +1,168 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+//vars
+$base-font-color: #444444;
+$accent-color: #a30c33;
+$secondary-color: #b01736;
+$base-font: 'Proxima Nova Cn Lt';
+
+.wrapper {
+  max-width: 1250px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  color: $base-font-color;
+  background-color: #ffffffff;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.header {
+  width: 100%;
+
+  border: 1px solid #d9d9d9;
+  &__container {
+    display: flex;
+    padding: 30px 70px;
+    gap: 300px;
+  }
+  &__logo {
+    cursor: pointer;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    gap: 20px;
+  }
+  &__item {
+    list-style: none;
+    cursor: pointer;
+  }
+}
+
+.intro {
+  background-image: url('../assets/Img/intro_background.png');
+  background-size: cover;
+  &__container {
+    padding: 158px 471px 158px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 100%;
+  }
+
+  &__button {
+    align-self: flex-start;
+    padding: 18px 28px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: $secondary-color;
+
+    font-size: 18px;
+    line-height: 20px;
+    color: #ffffffff;
+    cursor: pointer;
+  }
+}
+
+.info {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 70px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    text-align: center;
+    padding: 99px 110px;
+    max-width: 890px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 120%;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.08);
+  }
+  &__statistic-list {
+    list-style: none;
+    margin-top: 100px;
+    display: flex;
+    row-gap: 80px;
+    column-gap: 185px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  &__statistic-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__statistic-card__title {
+    font-size: 80px;
+    line-height: 80%;
+    color: $accent-color;
+  }
+  &__statistic-card__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    max-width: 250px;
+  }
+  span {
+    color: $secondary-color;
+  }
+}
+
+.map {
+  &__img {
+    margin-top: 90px;
+  }
+}
+
+.map-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 70x;
+  gap: 197px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+
+  &__info-btn {
+    background-color: #ffffffff;
+    border: none;
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 600;
+    color: #444444;
+    cursor: pointer;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  &__item {
+    font-size: 18px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  &__item_active {
+    color: $accent-color;
+  }
+}
