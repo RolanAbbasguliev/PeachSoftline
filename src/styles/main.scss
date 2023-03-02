@@ -3,7 +3,6 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  height: 100vh;
 }
 
 //vars
@@ -25,8 +24,6 @@ $base-font: 'Proxima Nova Cn Lt';
 }
 
 .header {
-  width: 100%;
-
   border: 1px solid #d9d9d9;
   &__container {
     display: flex;
@@ -162,7 +159,54 @@ $base-font: 'Proxima Nova Cn Lt';
     line-height: 20px;
     cursor: pointer;
   }
-  &__item_active {
-    color: $accent-color;
+  &__item::after {
+    display: block;
+    content: '';
+    transform: scaleX(0) translateY(16px);
+    border-bottom: solid 3px $accent-color;
+  }
+  &__item:hover::after {
+    animation-name: mapNavHoverAnim;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.mission {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $accent-color;
+  color: #ffffffff;
+
+  &__container {
+    padding: 140px 68px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 56px;
+    line-height: 100%;
+  }
+
+  &__subtitle {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 150%;
+    font-weight: 400;
+    max-width: 1100px;
+  }
+
+  &__img-left-pattern {
+    float: left;
+  }
+}
+
+@keyframes mapNavHoverAnim {
+  to {
+    transform: scaleX(1) translateY(16px);
   }
 }
